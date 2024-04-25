@@ -21,13 +21,13 @@
           });
 
             // Juni
-            //const stream = client.getMediaStream();
-
-          
-            
-            
             videoClient.startVideo();
-                      videoClient.startAudio({ backgroundNoiseSuppression: true });
+            const stream = videoClient.getMediaStream();
+            stream.enableBackgroundNoiseSuppression(true);
+
+
+
+            
           videoClient.on('video-end', () => {
             console.log('video ended') /* Add any actions to perform when the
                                         video ends, for example, print to
