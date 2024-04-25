@@ -16,9 +16,10 @@
           await videoClient.init({
             entryId,
             language: 'ja-JP',
-            name: 'LIXIL ショールーム京都' /* optional field, omit if not using, null value
+            name: 'LIXIL ショールーム東京' /* optional field, omit if not using, null value
                         not accepted */
           });
+          videoClient.startAudio({ backgroundNoiseSuppression: true })
           videoClient.startVideo()
           videoClient.on('video-end', () => {
             console.log('video ended') /* Add any actions to perform when the
