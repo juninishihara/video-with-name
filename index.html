@@ -19,8 +19,14 @@
             name: 'LIXIL ショールーム東京' /* optional field, omit if not using, null value
                         not accepted */
           });
-          videoClient.startAudio({ backgroundNoiseSuppression: true })
-          videoClient.startVideo()
+
+            // Juni
+            //const stream = client.getMediaStream();
+          videoClient.startAudio({ backgroundNoiseSuppression: true });
+          
+            
+            
+            videoClient.startVideo();
           videoClient.on('video-end', () => {
             console.log('video ended') /* Add any actions to perform when the
                                         video ends, for example, print to
