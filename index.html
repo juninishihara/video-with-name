@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-- other page elements -->
     <div id="create">create video</div>
-    <script src="https://us01ccistatic.zoom.us/us01cci/web-sdk/video-client.js">
+    <script src="https://us01ccistatic.zoom.us/us01cci/web-sdk/video-client.js"></script>
     <script src="coi-serviceworker.js"></script>
-    </script> <!-- The script source is the video client JS SDK for Contact Center.
+    <!-- The script source is the video client JS SDK for Contact Center.
     Get this from the code copied from the flow. -->
     <script>
       (() => {
@@ -16,7 +16,7 @@
           await videoClient.init({
             entryId,
             language: 'ja-JP',
-            name: 'LIXIL ショールーム大阪' /* optional field, omit if not using, null value
+            name: 'LIXIL ショールーム京都' /* optional field, omit if not using, null value
                         not accepted */
           });
           videoClient.startVideo()
