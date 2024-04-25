@@ -16,13 +16,13 @@
           await videoClient.init({
             entryId,
             language: 'ja-JP',
-            name: 'LIXIL ショールーム大阪' /* optional field, omit if not using, null value
+            name: 'LIXIL ショールーム京都' /* optional field, omit if not using, null value
                         not accepted */
           });
 
             // Juni
             videoClient.startVideo();
-            const stream = videoClient.getMediaStream();
+            //const stream = videoClient.getMediaStream();
             stream.enableBackgroundNoiseSuppression(true);
 
 
