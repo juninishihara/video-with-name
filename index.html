@@ -41,6 +41,7 @@
             console.log('video ended') /* Add any actions to perform when the
                                         video ends, for example, print to
                                         console log */
+              await videoClient.stopVideo();
             location.reload();
           })
         })
