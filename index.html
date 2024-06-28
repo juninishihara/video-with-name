@@ -12,11 +12,12 @@
     Get this from the code copied from the flow. -->
     <script>
       (() => {
-        const dom = document.getElementById('create')
+        const dom = document.getElementById('create');
+          let videoClient;
         dom.addEventListener('click', async () => {
           const entryId = "_PICaBPBR7O_a0oO2A7cPw" /* Get from the code copied from
                                           your flow */
-          const videoClient = new VideoClient({
+          videoClient = new VideoClient({
           });
           await videoClient.init({
             entryId,
@@ -41,13 +42,14 @@
             console.log('video ended'); /* Add any actions to perform when the
                                         video ends, for example, print to
                                         console log */
-              try {
-              await videoClient.stopVideo();
-              } catch (error) {
-                  console.error('Error stopping video client:', error);
+              if (videoClient) {
+                  videoClient.stopVideo().then(() => {
+                      location.reload();
+                      // window.location.href = 'https://juninishihara.github.io/video-with-name/'
+                  }).catch(error => {
+                      console.error('Error stopping video client: ', error);
+                  });
               }
-            location.reload();
-            // window.location.href = 'https://juninishihara.github.io/video-with-name/'
           });
         });
       })();
