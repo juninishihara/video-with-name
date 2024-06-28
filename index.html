@@ -38,14 +38,14 @@
 
             
           videoClient.on('video-end', () => {
-            console.log('video ended') /* Add any actions to perform when the
+            console.log('video ended'); /* Add any actions to perform when the
                                         video ends, for example, print to
                                         console log */
               await videoClient.stopVideo();
             location.reload();
-          })
-        })
-      })()
+          });
+        });
+      })();
     </script>
 <!-- other page elements -->
 </html>
