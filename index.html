@@ -41,7 +41,11 @@
             console.log('video ended'); /* Add any actions to perform when the
                                         video ends, for example, print to
                                         console log */
+              try {
               await videoClient.stopVideo();
+              } catch (error) {
+                  console.error('Error stopping video client:', error);
+              }
             location.reload();
             // window.location.href = 'https://juninishihara.github.io/video-with-name/'
           });
