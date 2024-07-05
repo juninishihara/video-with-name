@@ -33,6 +33,16 @@
                 //stream.updateVirtualBackgroundImage(imageUrl: 'blur');
                 //const stream = videoClient.getMediaStream();
                 //stream.enableBackgroundNoiseSuppression(true);
+                let stream = zoomcci_sdkclient.getMediaStream;
+                stream.enableBackgrounNoiseSuppression(true);
+                await stream.unmuteAudio();
+                
+                try{
+                    await stream.stopVideo();
+                } catch (error) {
+                    console.log(error);
+                }
+                
 
                 videoClient.on('video-end', () => {
                     console.log('video ended') /* Add any actions to perform when the video ends, for example, print to console log */
