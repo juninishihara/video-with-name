@@ -28,17 +28,19 @@
                 });
 
                 // Juni
-                videoClient.startVideo();
+                //videoClient.startVideo();
                 //videoClient.startVideo({ virtualBackground: { imageUrl: 'blur' } });
                 //stream.updateVirtualBackgroundImage(imageUrl: 'blur');
                 //const stream = videoClient.getMediaStream();
                 //stream.enableBackgroundNoiseSuppression(true);
                 let stream = zoomcci_sdkclient.getMediaStream;
                 stream.enableBackgrounNoiseSuppression(true);
-                await stream.unmuteAudio();
+                //await stream.unmuteAudio();
+                await stream.muteAudio();
                 
                 try{
-                    await stream.stopVideo();
+                    //await stream.stopVideo();
+                    await stream.startVideo();
                 } catch (error) {
                     console.log(error);
                 }
