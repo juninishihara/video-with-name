@@ -28,27 +28,25 @@
                 });
 
                 // Juni
-                //videoClient.startVideo();
+                videoClient.startVideo();
                 //videoClient.startVideo({ virtualBackground: { imageUrl: 'blur' } });
                 //stream.updateVirtualBackgroundImage(imageUrl: 'blur');
                 //const stream = videoClient.getMediaStream();
                 //stream.enableBackgroundNoiseSuppression(true);
                 
-                //let stream = zoomcci_sdkclient.getMediaStream;
-                //stream.enableBackgrounNoiseSuppression(true);
-                
+                let stream = zoomcci_sdkclient.getMediaStream;
+                stream.enableBackgrounNoiseSuppression(true);
+                stream.updateVirtualBackgroundImage(imageUrl: 'blur');
                 
                 //await stream.unmuteAudio();
+                await stream.muteAudio();
                 
-                
-//                await stream.muteAudio();
-                
-//                try{
-//                    //await stream.stopVideo();
-//                    await stream.startVideo();
-//                } catch (error) {
-//                    console.log(error);
-//                }
+                try{
+                    //await stream.stopVideo();
+                    await stream.startVideo();
+                } catch (error) {
+                    console.log(error);
+                }
                 
 
                 videoClient.on('video-end', () => {
