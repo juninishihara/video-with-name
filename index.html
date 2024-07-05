@@ -38,17 +38,6 @@
                 stream.enableBackgrounNoiseSuppression(true);
                 //stream.updateVirtualBackgroundImage(imageUrl: 'blur');
                 
-                //await stream.unmuteAudio();
-                await stream.muteAudio();
-                
-                try{
-                    //await stream.stopVideo();
-                    await stream.startVideo();
-                } catch (error) {
-                    console.log(error);
-                }
-                
-
                 videoClient.on('video-end', () => {
                     console.log('video ended') /* Add any actions to perform when the video ends, for example, print to console log */
                 })
